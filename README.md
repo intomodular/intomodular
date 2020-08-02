@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+# Developing a Teensy eurorack module.
 
-You can use the [editor on GitHub](https://github.com/intomodular/intomodular/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Problems!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Problem #1 - Can eurorack power a Teensy board?
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/intomodular/intomodular/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Yes! It can. The Eurorack cables protocol have a +12V and a -12V rail but they also provide a +5V rail that can be used to power our Teensy board. Please be aware that in order to power a Teensy board we would need to use the Vin input rather than the 3.3V input. Also MAKE SURE that your Teensy board has a Vin input that translate voltages into a suitable 3.3V input.
